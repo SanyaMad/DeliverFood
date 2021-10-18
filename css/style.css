@@ -76,10 +76,18 @@ body {
     border: none;
     border-radius: 2px;
     margin-left: 9px;
+    cursor: pointer;
 }
 
 .button__man {  
     background: url(../img/Man.svg) no-repeat 16px center;
+}
+
+.button__bin {
+    padding: 8px 36px 8px 16px;
+    margin-left: 0px;
+    margin-right: 32px;
+    background: url(../img/bin.svg) no-repeat 100px center;
 }
 
 .button--primary {
@@ -114,6 +122,7 @@ body {
     font-weight: bold;
     font-size: 39px;
     line-height: 46px;
+    
     color: #302C34;
 }
 
@@ -255,7 +264,6 @@ body {
 .block__navigation {
     display: flex;
     align-items: center;
-
 }
 
 .navigation__footer {
@@ -267,7 +275,6 @@ body {
     color: #595959;
     margin-right: 15px;
     text-decoration: none;
-    
 }
 
 .socials {
@@ -278,57 +285,151 @@ body {
 .social-img {
     margin-left: 25px;
 }
-.card__desc__tanyki {
+.restour__desc {
     display: flex;
     align-items: center;
-    justify-content: start;
     margin-left: 30px;
 }
-.restour__tanyki {
+
+.restour__reit {
     display: flex;
-    align-items: center;
-    margin-bottom: 44px;
+    align-items:center;
+    margin-bottom: 37px;
 }
-.title_tanyki {
+
+.product__desc {
+    max-width: 350px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 10px;
+    color: #8C8C8C;
+    margin-bottom: 25px;
+}
+
+.product__title {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
     line-height: 32px;
-}   
-.card__price_tanyki {
-    width: 450px;
-    margin-top: 10px;
-    color: #8C8C8C;
-    margin-left: -30px;
 }
-.card__img_tanyki {
-    margin-bottom: 25px;
-}
-.batton_tanyki {
-    margin-top: 25px;
-}
-.tanyki_price {
+
+
+.product__price {
     font-weight: bold;
-    line-height: 32px;
     font-size: 20px;
-    padding-left: 59px;
+    line-height: 32px;
 }
-.button__cart1{
-    background: url(../img/trash.png) no-repeat 106px center;
+
+/*модальное окно*/
+.modal {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background:rgba(0, 0, 0, 0.5);
 }
-.button--secondary1 {
-    background-color: #1890FF;
-    color: #fff;
-    border: 1px solid #1890FF
+
+.modal-block {
+    position: relative;
+    top: 50%;
+    margin: auto;
+    margin-top: -275px;
+    max-width: 780px;
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 5px;
+    padding: 40px 45px;
+    
 }
-.button1 {
-    font-family: 'Open Sans', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 20px;
-    padding: 8px 36px 8px 16px;
+
+.modal-title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 45px;
+}
+
+.button-closed {
+    position: absolute;
+    top: 50px;
+    right: 45px;
+    width: 25px;
+    height: 25px;
+    background: url(../img/krestick.svg) no-repeat center;
     border: none;
-    border-radius: 2px;
+    cursor: pointer;
+}
+
+.modal-body {
+    margin-bottom: 53px;
+}
+
+.cart-string {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d9d9d9;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.name-dish {
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.price-count {
+    display: flex;
+    align-items: center;
+}
+
+.price-dish {
+    margin-right: 48px;
+}
+
+.button-count {
+    width: 39px;
+    height: 32px;
+    border:1px solid #1890FF;
+    background: transparent;
+}
+
+.button-cancel {
+    background: white;
+}
+
+.count {
+    margin-left: 13px;
+    margin-right: 13px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttons-modal--footer .button {
+    padding: 8px 16px;
+}
+
+.fullprice {
+    padding:  15px 20px;
+    background-color: #262626;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    color: white;
+}
+
+/*переключатель*/
+
+.open {
+    display: block;
+    visibility: visible;
 }
